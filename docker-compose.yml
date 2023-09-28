@@ -1,0 +1,18 @@
+services:
+  r-lang:
+    container_name: r-lang
+    build: 
+      context: .
+      args:
+        - GID=${GID}
+        - UID=${UID}
+    image: r-image
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/home/docker/workspace
+      - renv:/home/docker/.cache/R/renv
+volumes:
+  renv:
+    external: true
+    
