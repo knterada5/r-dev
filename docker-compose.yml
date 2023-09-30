@@ -4,8 +4,8 @@ services:
     build: 
       context: .
       args:
-        - GID=${GID}
-        - UID=${UID}
+        - GID=${GID:-1000}
+        - UID=${UID:-1000}
     image: r-image
     tty: true
     stdin_open: true
