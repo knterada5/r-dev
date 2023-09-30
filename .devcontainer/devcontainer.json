@@ -9,7 +9,7 @@
 
     "workspaceFolder": "/home/docker/workspace",
 
-    "postCreateCommand": "R -e \"renv::install('languageserver')\"",
+    "postAttachCommand": "R -e \"renv::install('languageserver')\"",
 
     "customizations": {
         "vscode": {
